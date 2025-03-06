@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
 import MenuCard from "./MenuCard"
+import ShimmerData from "./ShimmerData"
 export default function RestaurantMenu(){
     const [RestData,SetRestdata]=useState(null)
     
@@ -20,8 +21,9 @@ export default function RestaurantMenu(){
        } fetchData();
          
            },[])
-           console.log(RestData);
-
+           
+           
+        
     
         return (
             <div>

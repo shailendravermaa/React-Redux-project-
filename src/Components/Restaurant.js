@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 
 import RestCard from "./RestCard";
+import ShimmerData from "./ShimmerData";
 
  export default function Restaurant(){
     const [Restdata,setRestdata]=useState([]);
@@ -14,8 +15,15 @@ import RestCard from "./RestCard";
     setRestdata(data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
     
 } fetchData();
+
   
     },[])
+  if(Restdata.length==0){
+    return(
+        <ShimmerData/>
+    )
+  }
+    
     
     return(
         <div className="flex flex-wrap container  mx-auto">
